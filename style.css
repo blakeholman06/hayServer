@@ -2,6 +2,7 @@ html {
   height: 100%;
   width: 100%;
   background-color: #af1293;
+  background-image: linear-gradient(purple 40%, blue)
 }
 form {
   border-style: double;
@@ -10,7 +11,8 @@ form {
   margin: 0 auto;
 }
 h1 {
-  color: black;
+  color: gold;
+  text-shadow: 7px 7px 5px black;
   font-family: 'sans-serif', Helev;
   text-align: center;
 }
