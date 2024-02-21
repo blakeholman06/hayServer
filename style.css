@@ -1,4 +1,16 @@
 html {
   height: 100%;
   width: 100%;
+  background-color: #af1293;
+}
+form {
+  border-style: double;
+  border-color: black;
+  width: 61%;
+  margin: 0 auto;
+}
+h1 {
+  color: black;
+  font-family: 'sans-serif', Helev;
+  text-align: center;
 }
