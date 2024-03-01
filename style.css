@@ -4,12 +4,14 @@ html {
   background-color: #af1293;
   background-image: linear-gradient(purple 40%, blue)
 }
-form {
+button {
   border-style: double;
   border-color: black;
   width: 20%;
-  margin: 0 auto;
+  margin: auto;
+  position:unset
 }
+
 h1 {
   color: gold;
   text-shadow: 7px 7px 10px black;
