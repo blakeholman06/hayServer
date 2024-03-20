@@ -29,6 +29,24 @@ if (mysqli_num_rows($result) > 0)  {
 } else {
   echo "no records found womp womp";
 }
+
+$sql = "INSERT INTO deliveryinfo (lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip)";
+
+if (mysqli_num_rows($result) > 0) {
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "lastName: " . $row["lastName"];
+    echo "firstName: " . $row["firstName"];
+    echo "balesOrdered: " . $row["balesOrdered"];
+    echo "streetNumber: " . $row["streetNumber"];
+    echo "streetName: " . $row["streetName"];
+    echo "city: " . $row["city"];
+    echo "state: " . $row["state"];
+    echo "zip: " . $row["zip"];
+    echo "New record created successfully";
+  }
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 myqli_close($conn);
 
 
