@@ -30,7 +30,7 @@ if (mysqli_num_rows($result) > 0)  {
   echo "no records found womp womp";
 }
 
-$sql = "INSERT INTO deliveryinfo (lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip)";
+$sql = "INSERT INTO deliveryinfo (output)";
 
 if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)) {
