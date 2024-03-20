@@ -36,3 +36,8 @@ function parseCSV(csvData) {
 
   return result;
 }
+$.ajax({
+  type : "POST",
+  url : "uploadCSV.php",
+  data : {result}
+})
