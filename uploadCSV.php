@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "hay";
-$dbname = "hayBaleData"
+$dbname = "hayBaleData";
 // Create connection obj
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -30,23 +30,6 @@ if (mysqli_num_rows($result) > 0)  {
   echo "no records found womp womp";
 }
 
-$sql = "INSERT INTO deliveryinfo (output)";
-
-if (mysqli_num_rows($result) > 0) {
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "lastName: " . $row["lastName"];
-    echo "firstName: " . $row["firstName"];
-    echo "balesOrdered: " . $row["balesOrdered"];
-    echo "streetNumber: " . $row["streetNumber"];
-    echo "streetName: " . $row["streetName"];
-    echo "city: " . $row["city"];
-    echo "state: " . $row["state"];
-    echo "zip: " . $row["zip"];
-    echo "New record created successfully";
-  }
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
 myqli_close($conn);
 
 
