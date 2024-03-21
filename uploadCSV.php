@@ -9,15 +9,6 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn) {
 die("connection failed, womp womp " . mysqli_connect_error());
 }
-$lastname = $_POST['lastname'];
-$firstname = $_POST['firstname'];
-$balesOrdered = $_POST['balesOrdered'];
-$streetNumber = $_POST['streetNumber'];
-$streetName = $_POST['streetName'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$zip = $_POST['zip'];
-$sql = "INSERT INTO `deliveryinfo`(`lastName`, `firstName`, `balesOrdered`, `streetNumber`, `streetName`, `city`, `state`, `zip`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]')";
 $sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo';";
 $result = mysqli_query($conn, $sql);
 
