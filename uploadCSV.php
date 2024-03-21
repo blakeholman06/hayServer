@@ -17,13 +17,7 @@ $streetName = $_POST['streetName'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zip'];
-$sql = "INSERT INTO 'deliveryinfo' ('lastname', 'firstName', 'balesOrdered', 'streetNumber', 'streetName', 'city', 'state', 'zip') VALUES ('$lastname', '$firstname', '$balesOrdered', '$streetNumber', '$streetName', '$city', '$state', '$zip')";
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
+INSERT INTO `deliveryinfo`(`lastName`, `firstName`, `balesOrdered`, `streetNumber`, `streetName`, `city`, `state`, `zip`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]')
 $sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo';";
 $result = mysqli_query($conn, $sql);
 
