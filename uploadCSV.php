@@ -9,7 +9,15 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn) {
 die("connection failed, womp womp " . mysqli_connect_error());
 }
-$sql = "INSERT INTO deliveryinfo ('lastName', 'firstName', 'balesOrdered', 'streetNumber', 'streetName', 'city', 'state', 'zip') VALUES (". $_POST("lastName"), $_POST("firstName"), $_POST("balesOrdered"), $_POST("streetNumber"), $_POST("streetName"), $_POST("city"), $_POST("state"), $_POST("zip");
+$lastname = $_POST['lastname'];
+$firstname = $_POST['firstname'];
+$balesOrdered = $_POST['balesOrdered'];
+$streetNumber = $_POST['streetNumber'];
+$streetName = $_POST['streetName'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$zip = $_POST['zip'];
+$sql = "INSERT INTO deliveryinfo ('lastname', 'firstName', 'balesOrdered', 'streetNumber', 'streetName', 'city', 'state', 'zip') VALUES ('$lastname', '$firstname', '$balesOrdered', '$streetNumber', '$streetName', '$city', '$state', '$zip')";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
