@@ -11,8 +11,15 @@ die("connection failed, womp womp " . mysqli_connect_error());
 }
 
 
-$sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo';";
-$result = mysqli_query($conn, $sql);
+UPDATE deliveryinfo
+SET lastName = 'Radaker'
+SET firstName = 'Joseph'
+SET balesOrdered = '1'
+SET streetNumber = '123'
+SET streetName = 'Main St'
+SET city = 'San Diego'
+SET state = 'CA'
+SET zip = '92130'
 
 
 if (mysqli_num_rows($result) > 0)  {
