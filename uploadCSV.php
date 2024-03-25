@@ -14,8 +14,6 @@ die("connection failed, womp womp " . mysqli_connect_error());
 $sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo';";
 $result = mysqli_query($conn, $sql);
 
-$sql = "INSERT INTO deliveryinfo (lastName, firstName, balesOrdered, streetNumber, city, state, zip)
-VALUES ('Radaker', 'Joseph', '30', '22 Jameston Dr', 'Jefferson', 'GA', '30549')";
 
 if (mysqli_num_rows($result) > 0)  {
   //handle output
