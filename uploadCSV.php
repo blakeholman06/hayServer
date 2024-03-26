@@ -18,6 +18,12 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 $sql = "INSERT INTO deliveryinfo (lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip) VALUES ('$lastName', '$firstName', '$balesOrdered', '$streetNumber', '$streetName', '$city', '$state', '$zip')";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
   
 $sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo'";
 $result = mysqli_query($conn, $sql);
