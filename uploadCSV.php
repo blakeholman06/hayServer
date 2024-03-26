@@ -9,11 +9,19 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn) {
 die("connection failed, womp womp " . mysqli_connect_error());
 }
-
-
-$sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo';";
+$lastName = "Radaker"
+$firstName = "Joe"
+$balesOrdered = 3
+$streetNumber = 123
+$streetName = "Main St"
+$city = "Anytown"
+$state = "CA"
+$zip = "12345" 
+$sql = "INSERT INTO deliveryinfo (lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip)"
+"VALUES ('$lastName', '$firstName', '$balesOrdered', '$streetNumber', '$streetName', '$city', '$state', '$zip')";
+  
+$sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo'";
 $result = mysqli_query($conn, $sql);
-
 
 if (mysqli_num_rows($result) > 0)  {
   //handle output
@@ -31,6 +39,7 @@ if (mysqli_num_rows($result) > 0)  {
 } else {
   echo "no records found womp womp";
 }
+
 myqli_close($conn);
 
 
