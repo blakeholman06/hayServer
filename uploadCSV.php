@@ -18,7 +18,7 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "INSERT INTO deliveryinfo ('$lastName', '$firstName', '$balesOrdered', '$streetNumber', '$streetName', '$city', '$state', '$zip')";
+$sql = "INSERT INTO deliveryinfo ('lastname', 'firstname', 'balesordered', 'streetNumber', 'streetName', 'city', 'state', 'zip') VALUES ('$lastName', '$firstName', '$balesOrdered', '$streetNumber', '$streetName', '$city', '$state', '$zip')";
 
 
 myqli_close($conn);
