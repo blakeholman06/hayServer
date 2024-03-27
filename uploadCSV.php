@@ -29,16 +29,16 @@ if (mysqli_query($conn, $sql)) {
 
 $sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'delivery info'";
 $result = mysqli_query($conn, $sql);
-
-while ($row = mysqli_fetch_assoc($result)) {
- echo "lastName: ". $row["lastName"] . "<br>";
- echo "firstName: ". $row["firstName"] . "<br>";
- echo "balesordered: ". $row["email"] . "<br><br>";
- echo "streetNumber: ". $row["streetNumber"] . "<br>";
- echo "streetName: ". $row["streetName"] . "<br>";
- echo "city: ". $row["city"] . "<br>";
- echo "state: ". $row["state"] . "<br>"; 
- echo "zip: ". $row["zip"] . "<br><br>";
+if (mysqli_num_rows($result) > 0)  {
+  while ($row = mysqli_fetch_assoc($result)) {
+  echo "lastName: ". $row["lastName"] . "<br>";
+  echo "firstName: ". $row["firstName"] . "<br>";
+  echo "balesordered: ". $row["email"] . "<br><br>";
+  echo "streetNumber: ". $row["streetNumber"] . "<br>";
+  echo "streetName: ". $row["streetName"] . "<br>";
+  echo "city: ". $row["city"] . "<br>";
+  echo "state: ". $row["state"] . "<br>"; 
+  echo "zip: ". $row["zip"] . "<br><br>";
 }
 mysqli_close($conn);
 
