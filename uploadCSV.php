@@ -39,6 +39,9 @@ if (mysqli_num_rows($result) > 0)  {
   echo "city: ". $row["city"] . "<br>";
   echo "state: ". $row["state"] . "<br>"; 
   echo "zip: ". $row["zip"] . "<br><br>";
+  }
+} else {
+  echo "0 results";
 }
 mysqli_close($conn);
 
