@@ -24,7 +24,7 @@ if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+} 
 //to make a save where everything is ok
 
 $sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'delivery info'";
@@ -33,12 +33,12 @@ if (mysqli_num_rows($result) > 0)  {
   while ($row = mysqli_fetch_assoc($result)) {
   echo "lastName: ". $row["lastName"] . "<br>";
   echo "firstName: ". $row["firstName"] . "<br>";
-  echo "balesordered: ". $row["email"] . "<br><br>";
+  echo "balesordered: ". $row["balesordered"] . "<br>";
   echo "streetNumber: ". $row["streetNumber"] . "<br>";
   echo "streetName: ". $row["streetName"] . "<br>";
   echo "city: ". $row["city"] . "<br>";
   echo "state: ". $row["state"] . "<br>"; 
-  echo "zip: ". $row["zip"] . "<br><br>";
+  echo "zip: ". $row["zip"] . "<br>";
   }
 } else {
   echo "0 results";
