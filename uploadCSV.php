@@ -27,23 +27,19 @@ if (mysqli_query($conn, $sql)) {
 }
 //to make a save where everything is ok
 
-$sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'deliveryinfo'";
-  $result = mysqli_query($conn, $sql);
-
-  if (mysqli_num_rows($result) > 0)  {
-    //handle output
-    while($row = mysqli_fetch_assoc($result))   {
-      echo "lastName: " . $row["lastName" ];
-
-    }
-  } else {
-    echo "no records found womp womp";
-  }
-
-myqli_close($conn);
-
-
-
+$sql = "SELECT * FROM deliveryinfo";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+ echo "lastName: ". $row["lastName"] . "<br>";
+ echo "firstName: ". $row["firstName"] . "<br>";
+ echo "balesordered: ". $row["email"] . "<br><br>";
+ echo "streetNumber: ". $row["streetNumber"] . "<br>"
+ echo "streetName: ". $row["streetName"] . "<br>"
+ echo "city: ". $row["city"] . "<br>"
+ echo "state: ". $row["state"] . "<br>" 
+ echo "zip: ". $row["zip"] . "<br><br>";
+}
+mysqli_close($conn);
 
 
 ?> 
