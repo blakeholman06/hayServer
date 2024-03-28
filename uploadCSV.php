@@ -27,7 +27,7 @@ if (mysqli_query($conn, $sql)) {
 } 
 //to make a save where everything is ok
 
-$sql = "UPDATE deliveryinfo (SET balesordered = balesordered + 100);
+$sql = "UPDATE deliveryinfo (SET balesordered = balesordered + 100)";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully";
