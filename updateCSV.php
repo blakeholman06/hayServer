@@ -17,17 +17,7 @@ $streetName = "Main St";
 $city = "Anytown";
 $state = "CA";
 $zip = "12345";
-
-$sql = "INSERT INTO deliveryinfo (lastname, firstname, balesordered, streetNumber, streetName, city, state, zip) VALUES ('$lastName', '$firstName', $balesOrdered, $streetNumber, '$streetName', '$city', '$state', '$zip')"; 
-
-if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-} 
-//to make a save where everything is ok
-
-$sql = "UPDATE deliveryinfo (SET balesordered = balesordered + 100);
+$sql = "UPDATE deliveryinfo (SET balesordered = balesordered + 100)";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully";
