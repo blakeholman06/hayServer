@@ -26,6 +26,6 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
-
+//save state where all is working for update and upload
 
 ?> 
