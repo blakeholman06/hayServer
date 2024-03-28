@@ -17,7 +17,7 @@ $streetName = "Main St";
 $city = "Anytown";
 $state = "CA";
 $zip = "12345";
-$sql = "UPDATE deliveryinfo (SET balesordered = balesordered + 100)";
+$sql = "UPDATE deliveryinfo (SET 'balesordered' = 'balesordered' + '100')";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully";
