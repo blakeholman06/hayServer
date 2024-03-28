@@ -18,7 +18,7 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "INSERT INTO deliveryinfo (lastname, firstname, balesordered, streetNumber, streetName, city, state, zip) VALUES ('$lastName', '$firstName', $balesOrdered, $streetNumber, '$streetName', '$city', '$state', '$zip')";
+$sql = "INSERT INTO deliveryinfo (lastname, firstname, balesordered, streetNumber, streetName, city, state, zip) VALUES ('$lastName', '$firstName', $balesOrdered, $streetNumber, '$streetName', '$city', '$state', '$zip')"; 
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
@@ -27,22 +27,13 @@ if (mysqli_query($conn, $sql)) {
 } 
 //to make a save where everything is ok
 
-$sql = "SELECT lastName, firstName, balesOrdered, streetNumber, streetName, city, state, zip FROM 'delivery info'";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0)  {
-  while ($row = mysqli_fetch_assoc($result)) {
-  echo "lastName: ". $row["lastName"] . "<br>";
-  echo "firstName: ". $row["firstName"] . "<br>";
-  echo "balesordered: ". $row["balesordered"] . "<br>";
-  echo "streetNumber: ". $row["streetNumber"] . "<br>";
-  echo "streetName: ". $row["streetName"] . "<br>";
-  echo "city: ". $row["city"] . "<br>";
-  echo "state: ". $row["state"] . "<br>"; 
-  echo "zip: ". $row["zip"] . "<br>";
-  }
+$sql = "UPDATE deliveryinfo SET balesordered = balesordered + 100 AND lastName = "Holman" WHERE lastName = "Radaker"";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Record updated successfully";
 } else {
-  echo "0 results";
-} 
+  echo "Error updating record: " . mysqli_error($conn);
+}
 mysqli_close($conn);
 
 
