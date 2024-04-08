@@ -18,10 +18,10 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "SELECT 'lastName' FROM deliveryinfo WHERE id = 1";
+$sql = "SELECT 'lastName' FROM deliveryinfo WHERE id = "1"";
 
 if (mysqli_query($conn, $sql)) {
-  echo '$sql';
+  echo "$sql";
 } else {"Error: " . $sql . "<br>" . mysqli_error($conn);}
 mysqli_close($conn);
        
