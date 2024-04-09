@@ -22,7 +22,7 @@ $sql = "SELECT lastName FROM deliveryinfo WHERE id = 1";
 $result = $conn->query($sql);
 
 if (mysqli_query($conn, $sql)) {
-  echo  $result;;
+  echo  $result;
 } else {"Error: " . $sql . "<br>" . mysqli_error($conn);}
 mysqli_close($conn);
        
