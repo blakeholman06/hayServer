@@ -19,9 +19,10 @@ $state = "CA";
 $zip = "12345";
 
 $sql = "SELECT lastName FROM deliveryinfo WHERE id = 1";
+$result = $conn->query($sql);
 
 if (mysqli_query($conn, $sql)) {
-  echo $sql;
+  echo  $result;;
 } else {"Error: " . $sql . "<br>" . mysqli_error($conn);}
 mysqli_close($conn);
        
