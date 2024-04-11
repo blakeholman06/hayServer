@@ -21,9 +21,11 @@ $zip = "12345";
 $sql = "SELECT `lastName`, `firstName`, `balesOrdered`, `streetNumber`, `streetName`, `city`, `state`, `zip`, `id` FROM `deliveryinfo` WHERE 0";
 $result = $conn->query($sql);
 
-if (mysqli_query($conn, $sql)) {
-  echo  $result;
-} else {"Error: " . $sql . "<br>" . mysqli_error($conn);}
-mysqli_close($conn);
+if ($result->num_rows > 0) {
+  echo "Records found in database<br>";
+  echo "<table border='1'>";
+} else {
+  echo "No records found in database";
+}
        
 ?>
