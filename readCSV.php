@@ -19,13 +19,25 @@ $state = "CA";
 $zip = "12345";
 
 $sql = "SELECT `lastName`, `firstName`, `balesOrdered`, `streetNumber`, `streetName`, `city`, `state`, `zip`, `id` FROM `deliveryinfo` WHERE 0";
-$result = $conn->query($sql);
+$result = mysqli_query($conn, $sql);
 
-if ($result->num_rows = 0) {
-  echo "Records found in database<br>";
-  echo "<table border='1'>";
+if (mysqli_num_rows($result) > 0)  {
+  //handle output
+  while($row = mysqli_fetch_assoc($result))   {
+    echo "lastName: " . $row["lastName" ];
+    echo "firstName: " . $row["firstName"];
+    echo "balesOrdered: " . $row["balesOrdered"];
+    echo "streetNumber: " . $row["streetNumber"];
+    echo "streetName: " . $row["streetName"];
+    echo "city: " . $row["city"];
+    echo "state: " . $row["state"];
+    echo "zip: " . $row["zip"];
+
+  }
 } else {
-  echo "No records found in database";
+  echo "no records found womp womp";
 }
-       
-?>
+//
+
+
+
