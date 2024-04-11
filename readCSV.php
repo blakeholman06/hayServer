@@ -18,7 +18,7 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "SELECT 'lastName' FROM 'deliveryinfo' WHERE 0;
+$sql = "SELECT 'lastName' FROM 'deliveryinfo' WHERE 0";
 $result = $conn->query($sql);
 
 if (mysqli_query($conn, $sql)) {
