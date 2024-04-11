@@ -25,12 +25,11 @@ if (mysqli_num_rows($result) > 0)  {
   //handle output
   while($row = mysqli_fetch_assoc($result))   {
     echo "lastName: " . $row["lastName" ];
-
   }
 } else {
   echo "no records found womp womp";
 }
-//
+
 
 
 
