@@ -18,7 +18,7 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "DELETE FROM deliveryinfo WHERE id = 1";
+$sql = "DELETE FROM 'deliveryinfo' WHERE  0";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record deleted successfully";
