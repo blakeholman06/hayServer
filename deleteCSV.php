@@ -18,12 +18,16 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "SELECT 'lastName' FROM 'deliveryinfo' WHERE 'id' = 1";
-$result = $conn->query($sql);
+$sql = "DELETE FROM deliveryinfo WHERE id = 1"
 
 if (mysqli_query($conn, $sql)) {
-  echo  $result;
-} else {"Error: " . $sql . "<br>" . mysqli_error($conn);}
+  echo "Record deleted successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+} 
+//to make a save where everything is ok
+
 mysqli_close($conn);
-       
-?>
+
+
+?> 
