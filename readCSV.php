@@ -25,13 +25,6 @@ if (mysqli_num_rows($result) > 0)  {
   //handle output
   while($row = mysqli_fetch_assoc($result))   {
     echo "lastName: " . $row["lastName" ];
-    echo "firstName: " . $row["firstName"];
-    echo "balesOrdered: " . $row["balesOrdered"];
-    echo "streetNumber: " . $row["streetNumber"];
-    echo "streetName: " . $row["streetName"];
-    echo "city: " . $row["city"];
-    echo "state: " . $row["state"];
-    echo "zip: " . $row["zip"];
 
   }
 } else {
