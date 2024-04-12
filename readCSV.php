@@ -18,7 +18,7 @@ $city = "Anytown";
 $state = "CA";
 $zip = "12345";
 
-$sql = "SELECT `lastName`, `firstName`, `balesOrdered`, `streetNumber`, `streetName`, `city`, `state`, `zip`, `id` FROM `deliveryinfo` WHERE 0";
+$sql = "SELECT `lastName`, `firstName`, `balesOrdered`, `streetNumber`, `streetName`, `city`, `state`, `zip`, `id` FROM `deliveryinfo`";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0)  {
