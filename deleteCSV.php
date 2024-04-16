@@ -20,7 +20,7 @@ $zip = "12345";
 
 $sql = "DELETE FROM 'deliveryinfo' WHERE id = 2";
 
-if (mysqli_query($conn, $sql)) {
+if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
