@@ -25,7 +25,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 } 
-//to make a save where everything is ok for delete 
 
 mysqli_close($conn);
 

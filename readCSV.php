@@ -33,3 +33,4 @@ if (mysqli_num_rows($result) > 0)  {
 
 // save state where read works 
 
+mysqli_close($conn);
